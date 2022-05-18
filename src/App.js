@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./routes/Layout";
+import Home from "./routes/Home";
+import Photos from "./routes/Photos";
+import News from "./routes/News";
+import Nopage from "./routes/Nopage";
+import Volunteer from "./routes/Volunteer";
+import { createTheme, ThemeProvider } from "@mui/material";
+import Admin01 from "./routes/Admin01";
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#758ecd",
+        },
+        secondary: {
+            main: "#e72419",
+        },
+    },
+});
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="photos" element={<Photos />} />
+                        <Route path="news" element={<News />} />
+                        <Route path="volunteer" element={<Volunteer />} />
+                        <Route path="admin01" element={<Admin01 />} />
+                        <Route path="*" element={<Nopage />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
+    );
 }
 
 export default App;
