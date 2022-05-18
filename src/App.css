@@ -1,6 +1,10 @@
 :root {
     --fc-primary: rgb(38, 38, 38);
-    --fc-secondary: white;
+    --fc-gray-800: rgb(66, 66, 66);
+    --fc-gray-400: rgb(203, 203, 203);
+    --fc-gray-200: rgb(247, 247, 247);
+
+    --bg-accent: #0067b3;
 }
 
 * {

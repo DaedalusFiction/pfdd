@@ -61,7 +61,6 @@ const Header = () => {
 
                     <Box
                         sx={{
-                            flexGrow: 1,
                             display: { xs: "flex", md: "none" },
                         }}
                     >
@@ -119,18 +118,25 @@ const Header = () => {
                             },
                             maxWidth: "10rem",
                             padding: "1rem 0",
+                            margin: "0 auto",
                         }}
                     >
                         <img
                             src={logo}
                             alt="KDA Logo"
-                            style={{ width: "100%", height: "auto" }}
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                            }}
                         />
                     </Box>
                     <Box
                         sx={{
                             flexGrow: 1,
-                            display: { xs: "none", md: "flex" },
+                            display: {
+                                xs: "none",
+                                md: "flex",
+                            },
                         }}
                     >
                         {pages.map((page, index) => (
@@ -148,6 +154,7 @@ const Header = () => {
                             </Link>
                         ))}
                     </Box>
+                    <Button variant="contained">Donate</Button>
                 </Toolbar>
             </Container>
         </AppBar>
