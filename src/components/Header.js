@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../assets/images/kdaus.png";
 
-const pages = ["Photos", "Recipes", "Upload"];
+const pages = ["Photos", "News", "Volunteer"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {

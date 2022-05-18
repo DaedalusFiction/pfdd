@@ -17,8 +17,10 @@ const Sidebar = () => {
                 padding: "5rem 0 2rem 0",
             }}
         >
-            <Typography variant="h5">Latest News</Typography>
-            <Typography>
+            <Typography variant="h5" gutterBottom>
+                Latest News
+            </Typography>
+            <Typography sx={{ color: "var(--fc-gray-800)" }}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
                 aliquid nulla neque modi ipsa, temporibus, libero laboriosam qui
                 eligendi quo id, culpa iste? Vero deserunt est odit. Asperiores
@@ -26,12 +28,16 @@ const Sidebar = () => {
                 sint. Veniam, qui deleniti...
             </Typography>
             <Divider sx={{ margin: "1rem 0" }} />
-            <Typography variant="h5">Useful Links</Typography>
+            <Typography variant="h5" gutterBottom>
+                Useful Links
+            </Typography>
             <Typography>Useful Link</Typography>
             <Typography>Useful Link</Typography>
             <Typography>Useful Link</Typography>
             <Divider sx={{ margin: "1rem 0" }} />
-            <Typography variant="h5">Support our Cause</Typography>
+            <Typography variant="h5" gutterBottom>
+                Support our Cause
+            </Typography>
             <Button variant="contained">Donate</Button>
         </Box>
     );
