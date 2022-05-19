@@ -29,7 +29,7 @@ const Home = () => {
         <Box>
             <Hero />
             <Container>
-                <Grid container spacing={8}>
+                <Grid container spacing={8} sx={{ marginBottom: "8rem" }}>
                     <Grid item xs={12} md={9}>
                         <Typography
                             variant="h2"
