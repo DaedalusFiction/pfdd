@@ -2,7 +2,10 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import carshow from "../assets/images/carshow.jpg";
 import cured from "../assets/images/carshow.jpg";
 import nashville from "../assets/images/carshow.jpg";
-import dallas from "../assets/images/carshow.jpg";
+import intent01 from "../assets/images/intent01.jpg";
+import intent02 from "../assets/images/intent02.jpg";
+import intent03 from "../assets/images/intent03.jpg";
+import draftAgenda from "../assets/images/draftAgenda.jpg";
 import ModalImage from "react-modal-image";
 
 const Events = () => {
@@ -10,7 +13,7 @@ const Events = () => {
         <>
             <Container maxWidth="lg">
                 <Typography variant="h2" sx={{ margin: "2em 0 0 0" }}>
-                    Upcoming Events
+                    Important Documentation
                 </Typography>
                 <Typography sx={{ margin: "1em 0 2em 0" }}>
                     Click on the photos below for a larger view!
@@ -24,14 +27,14 @@ const Events = () => {
                                 variant="h4"
                                 sx={{ marginBottom: "2.3em" }}
                             >
-                                30 April-May 1: Dallas
+                                Letter of Intent, page 1
                             </Typography>
                             <Box>
                                 <ModalImage
                                     // className="gallery-photo"
-                                    small={dallas}
-                                    medium={dallas}
-                                    alt="dallas itinerary"
+                                    small={intent01}
+                                    medium={intent01}
+                                    alt="letter of intent page 1"
                                     style={{ width: "100%", height: "auto" }}
                                 />
                             </Box>
@@ -40,14 +43,14 @@ const Events = () => {
                     <Grid item xs={12} md={6}>
                         <div className="news-container">
                             <Typography variant="h4">
-                                5 May: Nashville, Lane Motor Museum
+                                Letter of Intent, page 2
                             </Typography>
                             <Box>
                                 <ModalImage
                                     // className="gallery-photo"
-                                    small={nashville}
-                                    medium={nashville}
-                                    alt="nashville itinerary"
+                                    small={intent02}
+                                    medium={intent02}
+                                    alt="letter of intent page 2"
                                     style={{ width: "100%", height: "auto" }}
                                 />
                             </Box>
@@ -56,15 +59,14 @@ const Events = () => {
                     <Grid item xs={12} md={6}>
                         <div className="news-container">
                             <Typography variant="h4">
-                                13-14 May: Carlisle Import & Performance
-                                Nationals
+                                Letter of Intent, page 3
                             </Typography>
                             <Box>
                                 <ModalImage
                                     // className="gallery-photo"
-                                    small={carshow}
-                                    medium={carshow}
-                                    alt="carshow itinerary"
+                                    small={intent03}
+                                    medium={intent03}
+                                    alt="letter of intent page 3"
                                     style={{ width: "100%", height: "auto" }}
                                 />
                             </Box>
@@ -72,28 +74,16 @@ const Events = () => {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <div className="news-container">
-                            <Typography variant="h4">
-                                15 May: Fundraiser in Columbia, Maryland
-                            </Typography>
+                            <Typography variant="h4">Agenda (Draft)</Typography>
                             <Box>
                                 <ModalImage
                                     // className="gallery-photo"
-                                    small={cured}
-                                    medium={cured}
-                                    alt="cured itinerary"
+                                    small={draftAgenda}
+                                    medium={draftAgenda}
+                                    alt="agenda"
                                     style={{ width: "100%", height: "auto" }}
                                 />
                             </Box>
-                            <a
-                                href="https://www.kennedysdisease.org/kda-campaigns"
-                                style={{
-                                    color: "blue",
-                                    fontSize: "1.3rem",
-                                }}
-                            >
-                                Click Here and select "Cured, 18th and 21st" to
-                                reserve your spot!
-                            </a>
                         </div>
                     </Grid>
                 </Grid>

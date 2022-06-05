@@ -86,13 +86,10 @@ const Volunteer = () => {
                         margin: "1em 0",
                     }}
                 >
-                    Everyone is invited to participate in the Great Road Trip.
-                    You can drive the 2CV, ride in the car as a passenger, or
-                    ride along in your own car for all or part of a leg of the
-                    trip. Priority will be given to KD sufferers and their
-                    family members as well as researchers and clinicians engaged
-                    in research or patient care. Citroen enthusiasts, many of
-                    whom have helped with the planning effort, are most welcome.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing,
+                    suscipit aliquam consequuntur icum aliquid ex rem delectus
+                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
+                    molestiae quod!
                 </Typography>
                 <Typography
                     sx={{
@@ -101,11 +98,10 @@ const Volunteer = () => {
                         margin: "1em 0",
                     }}
                 >
-                    This particular 2CV was built to British specifications. It
-                    is a right-hand drive car with manual transmission. The foot
-                    pedals are in the same location as in a left-hand drive car
-                    with manual transmission, but -- uniquely -- the gear shift
-                    is in the dash. There is a{" "}
+                    Lorem ipsum dolor sit amet, consectetur adipisicing,
+                    suscipit aliquam consequuntur icum aliquid ex rem delectus
+                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
+                    molestiae quod!{" "}
                     <a
                         href="https://www.youtube.com/watch?v=pig06YJijQ8&ab_channel=DarrenArthur"
                         target="_blank"
@@ -113,9 +109,10 @@ const Volunteer = () => {
                     >
                         video
                     </a>{" "}
-                    with instructions about how to drive the 2CV, and anyone
-                    interested in driving the car may want to review this video
-                    ahead of time.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing,
+                    suscipit aliquam consequuntur icum aliquid ex rem delectus
+                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
+                    molestiae quod!
                 </Typography>
                 <Typography
                     sx={{
@@ -124,11 +121,10 @@ const Volunteer = () => {
                         margin: "1em 0",
                     }}
                 >
-                    Darren Arthur, the mechanic who rebuilt the car, will be in
-                    (or with) the car for the entire journey and will provide
-                    on-the-spot instruction to anyone interested in driving. A
-                    2CV specialist with his own shop in the UK, Darren will also
-                    be able to handle any mechanical issues that may arise.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing,
+                    suscipit aliquam consequuntur icum aliquid ex rem delectus
+                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
+                    molestiae quod!
                 </Typography>
                 <Typography
                     sx={{
@@ -137,10 +133,10 @@ const Volunteer = () => {
                         margin: "1em 0",
                     }}
                 >
-                    There is no cost to drive or ride in the 2CV. We do ask that
-                    anyone who drives or rides in the car provide their own
-                    transportation to or from the endpoint of the leg or partial
-                    leg they travel.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing,
+                    suscipit aliquam consequuntur icum aliquid ex rem delectus
+                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
+                    molestiae quod!
                 </Typography>
                 <Typography
                     sx={{

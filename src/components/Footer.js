@@ -5,16 +5,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     const links = [
         {
-            text: "Link One",
-            href: "https://streamerize.com",
+            text: "FDA's PFDD Information",
+            href: "https://www.fda.gov/drugs/development-approval-process-drugs/cder-patient-focused-drug-development",
         },
         {
-            text: "Link Two",
-            href: "https://sicktooth.com",
-        },
-        {
-            text: "Link Three",
-            href: "https://sicktooth.com",
+            text: "Kennedy's Disease Association",
+            href: "https://kennedysdisease.org",
         },
     ];
     return (
@@ -27,28 +23,21 @@ const Footer = () => {
             <Container>
                 <Typography
                     variant="h6"
-                    sx={{ color: "var(--fc-gray-200)", marginBottom: "1em" }}
+                    sx={{ color: "var(--fc-gray-400)", marginBottom: "1em" }}
                 >
                     Kennedy's Disease Association 2022 PFDD
                 </Typography>
 
-                {links.map((item) => {
+                {links.map((item, index) => {
                     return (
-                        <Button
-                            href={item.href}
-                            rel="noreferrer"
-                            target="_blank"
-                            sx={{
-                                display: "block",
-                                color: "var(--fc-gray-400)",
-                                "&:hover": {
-                                    color: "var(--fc-gray-200)",
-                                },
-                                width: "fit-content",
-                            }}
-                        >
-                            {item.text}
-                        </Button>
+                        <a href={item.href} target="_blank" rel="noreferrer">
+                            <Typography
+                                sx={{ color: "var(--fc-gray-200)" }}
+                                gutterBottom
+                            >
+                                {item.text}
+                            </Typography>
+                        </a>
                     );
                 })}
             </Container>
