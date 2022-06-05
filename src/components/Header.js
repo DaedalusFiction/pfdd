@@ -16,26 +16,17 @@ import { Link } from "react-router-dom";
 
 import logo from "../assets/images/kdaus.png";
 
-const pages = ["Photos", "News", "Volunteer"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Photos", "Documents", "Volunteer"];
 
 const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
     };
 
     return (
@@ -52,11 +43,13 @@ const Header = () => {
                             padding: "1rem 0",
                         }}
                     >
-                        <img
-                            src={logo}
-                            alt="KDA Logo"
-                            style={{ width: "100%", height: "auto" }}
-                        />
+                        <Link to="/">
+                            <img
+                                src={logo}
+                                alt="KDA Logo"
+                                style={{ width: "100%", height: "auto" }}
+                            />
+                        </Link>
                     </Box>
 
                     <Box

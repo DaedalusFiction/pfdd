@@ -18,17 +18,6 @@ const Sidebar = () => {
             }}
         >
             <Typography variant="h5" gutterBottom>
-                Latest News
-            </Typography>
-            <Typography sx={{ color: "var(--fc-gray-800)" }}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-                aliquid nulla neque modi ipsa, temporibus, libero laboriosam qui
-                eligendi quo id, culpa iste? Vero deserunt est odit. Asperiores
-                temporibus est molestias ullam! Debitis beatae aperiam sequi
-                sint. Veniam, qui deleniti...
-            </Typography>
-            <Divider sx={{ margin: "1rem 0" }} />
-            <Typography variant="h5" gutterBottom>
                 Useful Links
             </Typography>
             <Typography>Useful Link</Typography>
