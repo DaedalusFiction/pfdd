@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
-import heroImage from "../assets/images/heroImage2.jpg";
+import heroImage from "../assets/images/Jameson.jpg";
 
 const Hero = () => {
     return (
