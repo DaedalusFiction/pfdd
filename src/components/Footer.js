@@ -23,7 +23,7 @@ const Footer = () => {
             <Container>
                 <Typography
                     variant="h6"
-                    sx={{ color: "var(--fc-gray-400)", marginBottom: "1em" }}
+                    sx={{ color: "white", marginBottom: "1em" }}
                 >
                     Kennedy's Disease Association 2022 PFDD
                 </Typography>

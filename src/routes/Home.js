@@ -56,7 +56,7 @@ const Home = () => {
                             of muscle function. KD is an X-linked disease that
                             affects primarily men; women are carriers and may
                             experience symptoms such as cramping. There is no
-                            cure and no effective treatment. Symptoms generally
+                            cure and no effective treatment.X Symptoms generally
                             appear in the mid-40s, although earlier and later
                             onsets have been recorded. Cramping, fasciculations,
                             and a continuing decline in mobility are common.
@@ -67,7 +67,7 @@ const Home = () => {
                             of the disease. Endocrine-related abnormalities such
                             as gynecomastia, fatty liver, diabetes, and reduced
                             fertility usually accompany the neuromuscular
-                            symptoms. Global prevalence estimates for KD range
+                            symptoms.X Global prevalence estimates for KD range
                             from 1:50,000 to 1:30,000 individuals, with higher
                             incidences in some areas of Italy, Japan, and
                             Finland due to multiple founder effects. The actual

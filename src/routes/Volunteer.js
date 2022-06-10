@@ -146,17 +146,6 @@ const Volunteer = () => {
                     }}
                 >
                     For more information, please contact KDA using this form:
-                    <br />
-                    <br />
-                    <Button
-                        href="https://www.kennedysdisease.org/contact-kda"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Contact Us (kennedysdisease.org)
-                    </Button>
-                    <br />
-                    <br />
                     and let us know about your interest and/or any questions you
                     may have.
                 </Typography>

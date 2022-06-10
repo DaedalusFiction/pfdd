@@ -23,6 +23,20 @@ const Events = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                         <div className="news-container">
+                            <Typography variant="h4">Agenda (Draft)</Typography>
+                            <Box>
+                                <ModalImage
+                                    // className="gallery-photo"
+                                    small={draftAgenda}
+                                    medium={draftAgenda}
+                                    alt="agenda"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Box>
+                        </div>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <div className="news-container">
                             <Typography
                                 variant="h4"
                                 sx={{ marginBottom: "2.3em" }}
@@ -67,20 +81,6 @@ const Events = () => {
                                     small={intent03}
                                     medium={intent03}
                                     alt="letter of intent page 3"
-                                    style={{ width: "100%", height: "auto" }}
-                                />
-                            </Box>
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <div className="news-container">
-                            <Typography variant="h4">Agenda (Draft)</Typography>
-                            <Box>
-                                <ModalImage
-                                    // className="gallery-photo"
-                                    small={draftAgenda}
-                                    medium={draftAgenda}
-                                    alt="agenda"
                                     style={{ width: "100%", height: "auto" }}
                                 />
                             </Box>
