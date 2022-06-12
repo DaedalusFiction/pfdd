@@ -7,24 +7,12 @@ import {
     Typography,
 } from "@mui/material";
 import React from "react";
+import FAQAccordion from "../components/FAQAccordion";
 import Hero from "../components/Hero";
 import Sidebar from "../components/Sidebar";
+import FAQs from "../assets/data/FAQs";
 
 const Home = () => {
-    const FAQs = [
-        {
-            question: "When is the PFDD?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing, suscipit aliquam consequuntur icum aliquid ex rem delectus quam, nesciunt nam. Laudantium sequi deleniti voluptate molestiae quod!",
-        },
-        {
-            question: "Whos is in charge?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing, suscipit aliquam consequuntur icum aliquid ex rem delectus quam, nesciunt nam. Laudantium sequi deleniti voluptate molestiae quod!",
-        },
-        {
-            question: "How can I help?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing, suscipit aliquam consequuntur icum aliquid ex rem delectus quam, nesciunt nam. Laudantium sequi deleniti voluptate molestiae quod!",
-        },
-    ];
     return (
         <Box>
             <Hero />
@@ -43,7 +31,7 @@ const Home = () => {
                             sx={{
                                 maxWidth: "75ch",
                                 color: "var(--fc-gray-800)",
-                                margin: "0 auto",
+                                margin: "0 auto 1em auto",
                             }}
                         >
                             Kennedy's Disease (KD), also known as Spinal and
@@ -56,19 +44,37 @@ const Home = () => {
                             of muscle function. KD is an X-linked disease that
                             affects primarily men; women are carriers and may
                             experience symptoms such as cramping. There is no
-                            cure and no effective treatment.X Symptoms generally
-                            appear in the mid-40s, although earlier and later
-                            onsets have been recorded. Cramping, fasciculations,
-                            and a continuing decline in mobility are common.
-                            Bulbar manifestations include difficulties with
-                            speech and swallowing that may increase over time.
-                            Laryngospasms cause a frightening sense of choking,
-                            and tongue muscles tend to atrophy over the course
-                            of the disease. Endocrine-related abnormalities such
-                            as gynecomastia, fatty liver, diabetes, and reduced
+                            cure and no effective treatment.
+                        </Typography>
+                        <Typography
+                            sx={{
+                                maxWidth: "75ch",
+                                color: "var(--fc-gray-800)",
+                                margin: "0 auto 1em auto",
+                            }}
+                        >
+                            Symptoms generally appear in the mid-40s, although
+                            earlier and later onsets have been recorded.
+                            Cramping, fasciculations, and a continuing decline
+                            in mobility are common. Bulbar manifestations
+                            include difficulties with speech and swallowing that
+                            may increase over time. Laryngospasms cause a
+                            frightening sense of choking, and tongue muscles
+                            tend to atrophy over the course of the disease.
+                            Endocrine-related abnormalities such as
+                            gynecomastia, fatty liver, diabetes, and reduced
                             fertility usually accompany the neuromuscular
-                            symptoms.X Global prevalence estimates for KD range
-                            from 1:50,000 to 1:30,000 individuals, with higher
+                            symptoms.
+                        </Typography>
+                        <Typography
+                            sx={{
+                                maxWidth: "75ch",
+                                color: "var(--fc-gray-800)",
+                                margin: "0 auto 1em auto",
+                            }}
+                        >
+                            Global prevalence estimates for KD range from
+                            1:50,000 to 1:30,000 individuals, with higher
                             incidences in some areas of Italy, Japan, and
                             Finland due to multiple founder effects. The actual
                             prevalence may be higher due to cases that are
@@ -140,7 +146,8 @@ const Home = () => {
                         >
                             Frequently Asked Questions
                         </Typography>
-                        {FAQs.map((FAQ) => {
+                        <FAQAccordion FAQs={FAQs} />
+                        {/* {FAQs.map((FAQ) => {
                             return (
                                 <Box>
                                     <Typography
@@ -164,7 +171,7 @@ const Home = () => {
                                     </Typography>
                                 </Box>
                             );
-                        })}
+                        })} */}
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <Sidebar />

@@ -5,7 +5,7 @@ import Home from "./routes/Home";
 import Photos from "./routes/Photos";
 import Documents from "./routes/Documents";
 import Nopage from "./routes/Nopage";
-import Volunteer from "./routes/Volunteer";
+import Register from "./routes/Register";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Admin01 from "./routes/Admin01";
 
@@ -28,7 +28,7 @@ function App() {
                         <Route index element={<Home />} />
                         <Route path="photos" element={<Photos />} />
                         <Route path="documents" element={<Documents />} />
-                        <Route path="volunteer" element={<Volunteer />} />
+                        <Route path="register" element={<Register />} />
                         <Route path="admin01" element={<Admin01 />} />
                         <Route path="*" element={<Nopage />} />
                     </Route>

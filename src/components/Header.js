@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../assets/images/kdaus.png";
 
-const pages = ["Photos", "Documents", "Volunteer"];
+const pages = ["Photos", "Documents", "Register"];
 
 const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
