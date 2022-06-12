@@ -18,6 +18,7 @@ export default function FAQAccordion({ FAQs }) {
             {FAQs.map((FAQ, index) => {
                 return (
                     <Accordion
+                        key={index}
                         expanded={expanded === "panel" + index}
                         onChange={handleChange("panel" + index)}
                     >

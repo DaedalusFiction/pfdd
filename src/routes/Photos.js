@@ -16,7 +16,16 @@ import React from "react";
 
 const Photos = () => {
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="lg" sx={{ paddingBottom: "7vw" }}>
+            <Typography
+                variant="h2"
+                sx={{
+                    margin: "1em 0 .75em 0",
+                }}
+            >
+                Photos
+            </Typography>
+            <Typography>No photos yet. Check back soon!</Typography>
             {/* <div className="photos">
                 <Typography variant="h2" sx={{ margin: "2rem" }}>
                     Latest Photos

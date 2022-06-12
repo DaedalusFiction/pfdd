@@ -147,7 +147,14 @@ const Header = () => {
                             </Link>
                         ))}
                     </Box>
-                    <Button variant="contained">Donate</Button>
+                    <Button
+                        variant="contained"
+                        href="https://www.kennedysdisease.org/get-involved/donate-now"
+                        target="_BLANK"
+                        rel="noreferrer"
+                    >
+                        Donate
+                    </Button>
                 </Toolbar>
             </Container>
         </AppBar>

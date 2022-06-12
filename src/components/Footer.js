@@ -30,7 +30,12 @@ const Footer = () => {
 
                 {links.map((item, index) => {
                     return (
-                        <a href={item.href} target="_blank" rel="noreferrer">
+                        <a
+                            key={index}
+                            href={item.href}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <Typography
                                 sx={{ color: "var(--fc-gray-200)" }}
                                 gutterBottom

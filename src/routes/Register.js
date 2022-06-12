@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { Button, TextField, Container, Typography, Box } from "@mui/material";
+import {
+    Button,
+    TextField,
+    Container,
+    Typography,
+    Box,
+    FormControl,
+    InputLabel,
+    Select,
+    MenuItem,
+} from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import emailjs from "@emailjs/browser";
@@ -17,23 +27,27 @@ const Volunteer = () => {
     const [nameError, setNameError] = useState(false);
 
     const [emailError, setEmailError] = useState(false);
-    const [addressError, setAddressError] = useState(false);
     const [telephoneError, setTelephoneError] = useState(false);
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const [affiliation, setAffiliation] = useState("");
+
+    const handleChange = (event) => {
+        console.log(event.target.value);
+        setAffiliation(event.target.value);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const name = document.getElementById("input-name").value;
-        const address = document.getElementById("input-address").value;
         const telephone = document.getElementById("input-telephone").value;
         const email = document.getElementById("input-email").value;
         const comment = document.getElementById("input-comment").value;
 
         setNameError(false);
         setEmailError(false);
-        setAddressError(false);
         setTelephoneError(false);
         if (name === "") {
             setNameError(true);
@@ -41,27 +55,17 @@ const Volunteer = () => {
         if (email === "") {
             setEmailError(true);
         }
-        if (address === "") {
-            setAddressError(true);
-        }
         if (telephone === "") {
             setTelephoneError(true);
         }
 
-        const volunteer = {
-            name: name,
-            email: email,
-            address: address,
-            telephone: telephone,
-            comment: comment,
-        };
-
         setIsSubmitted(true);
 
         var templateParams = {
+            website: "PFDD",
             name: name,
             email: email,
-            address: address,
+            affiliation: affiliation,
             telephone: telephone,
             comment: comment,
         };
@@ -115,82 +119,105 @@ const Volunteer = () => {
                     the remainder of the conference.
                 </Typography>
 
-                <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "start",
-                            gap: "1em",
-                            marginBottom: "3rem",
-                        }}
+                {!isSubmitted && (
+                    <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "start",
+                                gap: "1em",
+                                marginBottom: "3rem",
+                            }}
+                        >
+                            <TextField
+                                // onChange={(e) => {
+                                //     setName(e.target.value);
+                                // }}
+                                id="input-name"
+                                label="Name"
+                                variant="outlined"
+                                required
+                                size="small"
+                                error={nameError}
+                            />
+                            <TextField
+                                // onChange={(e) => {
+                                //     setEmail(e.target.value);
+                                // }}
+                                id="input-email"
+                                label="Email"
+                                variant="outlined"
+                                required
+                                size="small"
+                                error={emailError}
+                            />
+
+                            <TextField
+                                // onChange={(e) => {
+                                //     setTelephone(e.target.value);
+                                // }}
+                                id="input-telephone"
+                                label="Telephone"
+                                variant="outlined"
+                                required
+                                size="small"
+                                error={telephoneError}
+                            />
+                            <Box sx={{ minWidth: 120 }}>
+                                <FormControl fullWidth>
+                                    <InputLabel>Affiliation</InputLabel>
+                                    <Select
+                                        value={affiliation}
+                                        label="Affiliation"
+                                        onChange={handleChange}
+                                    >
+                                        {selectOptions.map((option) => {
+                                            return (
+                                                <MenuItem
+                                                    key={option}
+                                                    value={option}
+                                                >
+                                                    {option}
+                                                </MenuItem>
+                                            );
+                                        })}
+                                    </Select>
+                                </FormControl>
+                            </Box>
+                            <TextField
+                                // onChange={(e) => {
+                                //     setName(e.target.value);
+                                // }}
+                                id="input-comment"
+                                label="Comment (optional)"
+                                variant="outlined"
+                                multiline
+                                rows={4}
+                                size="medium"
+                                sx={{ minWidth: "40ch" }}
+                            />
+                            {!isSubmitted && (
+                                <Button
+                                    id="button-submit"
+                                    type="submit"
+                                    variant="contained"
+                                    endIcon={<KeyboardArrowRightIcon />}
+                                >
+                                    Submit
+                                </Button>
+                            )}
+                        </Box>
+                    </form>
+                )}
+
+                {isSubmitted && (
+                    <Typography
+                        sx={{ marginBottom: "3em", fontWeight: "bold" }}
                     >
-                        <TextField
-                            // onChange={(e) => {
-                            //     setName(e.target.value);
-                            // }}
-                            id="input-name"
-                            label="Name"
-                            variant="outlined"
-                            required
-                            size="small"
-                            error={nameError}
-                        />
-                        <TextField
-                            // onChange={(e) => {
-                            //     setEmail(e.target.value);
-                            // }}
-                            id="input-email"
-                            label="Email"
-                            variant="outlined"
-                            required
-                            size="small"
-                            error={emailError}
-                        />
-
-                        <TextField
-                            // onChange={(e) => {
-                            //     setTelephone(e.target.value);
-                            // }}
-                            id="input-telephone"
-                            label="Telephone"
-                            variant="outlined"
-                            required
-                            size="small"
-                            error={telephoneError}
-                        />
-                        <Selecter selectOptions={selectOptions} />
-                        <TextField
-                            // onChange={(e) => {
-                            //     setName(e.target.value);
-                            // }}
-                            id="input-comment"
-                            label="Comment (optional)"
-                            variant="outlined"
-                            multiline
-                            rows={4}
-                            size="medium"
-                            sx={{ minWidth: "40ch" }}
-                        />
-                        {!isSubmitted && (
-                            <Button
-                                id="button-submit"
-                                type="submit"
-                                variant="contained"
-                                endIcon={<KeyboardArrowRightIcon />}
-                            >
-                                Submit
-                            </Button>
-                        )}
-                    </Box>
-
-                    {isSubmitted && (
-                        <p>
-                            Thank you for volunteering to help with the 2022
-                            PFDD!
-                        </p>
-                    )}
-                </form>
+                        Thank you for volunteering to help with the 2022 PFDD!
+                    </Typography>
+                )}
             </div>
         </Container>
     );

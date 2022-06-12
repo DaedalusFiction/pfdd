@@ -29,7 +29,7 @@ const Sidebar = () => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <Typography gutterBottom>
+                <Typography gutterBottom sx={{ textDecoration: "underline" }}>
                     Kennedy's Disease Association
                 </Typography>
             </a>
@@ -38,7 +38,9 @@ const Sidebar = () => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <Typography gutterBottom>FDA's PFDD Information</Typography>
+                <Typography gutterBottom sx={{ textDecoration: "underline" }}>
+                    FDA's PFDD Information
+                </Typography>
             </a>
             <Divider sx={{ margin: "1rem 0" }} />
             <Typography
@@ -47,7 +49,14 @@ const Sidebar = () => {
             >
                 Support our Cause
             </Typography>
-            <Button variant="contained">Donate</Button>
+            <Button
+                variant="contained"
+                href="https://www.kennedysdisease.org/get-involved/donate-now"
+                target="_BLANK"
+                rel="noreferrer"
+            >
+                Donate
+            </Button>
         </Box>
     );
 };
