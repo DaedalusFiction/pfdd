@@ -22,7 +22,7 @@ const Home = () => {
                         <Typography
                             variant="h2"
                             sx={{
-                                margin: "2em 0 .75em 0",
+                                margin: "1em 0 .75em 0",
                             }}
                         >
                             What is Kennedy's Disease?
@@ -97,7 +97,7 @@ const Home = () => {
                         <Typography
                             variant="h2"
                             sx={{
-                                margin: "2em 0 .75em 0",
+                                margin: "1em 0 .75em 0",
                             }}
                         >
                             What is a PFDD?
@@ -141,7 +141,7 @@ const Home = () => {
                         <Typography
                             variant="h2"
                             sx={{
-                                margin: "2em 0 .75em 0",
+                                margin: "1em 0 .75em 0",
                             }}
                         >
                             Frequently Asked Questions

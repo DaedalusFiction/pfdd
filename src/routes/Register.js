@@ -3,8 +3,17 @@ import { Button, TextField, Container, Typography, Box } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import emailjs from "@emailjs/browser";
+import Selecter from "../components/Selecter";
 
 const Volunteer = () => {
+    const selectOptions = [
+        "Government",
+        "Academia",
+        "Pharmaceutical Company",
+        "Medical Researcher",
+        "Other",
+        "None",
+    ];
     const [nameError, setNameError] = useState(false);
 
     const [emailError, setEmailError] = useState(false);
@@ -77,7 +86,7 @@ const Volunteer = () => {
         <Container maxWidth="md">
             <div className="volunteer">
                 <Typography variant="h2" sx={{ margin: ".7em 0" }}>
-                    Sign Up
+                    Register
                 </Typography>
                 <Typography
                     sx={{
@@ -86,69 +95,26 @@ const Volunteer = () => {
                         margin: "1em 0",
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing,
-                    suscipit aliquam consequuntur icum aliquid ex rem delectus
-                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
-                    molestiae quod!
+                    Complete the form below to register for the PFDD meeting on{" "}
+                    <strong>November 9, 2022.</strong> An email with the Zoom
+                    link for the meeting will be sent to you approximately one
+                    week before the meeting.
                 </Typography>
                 <Typography
                     sx={{
                         maxWidth: "75ch",
                         color: "var(--fc-gray-800)",
-                        margin: "1em 0",
+                        margin: "1em 0 2em 0",
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing,
-                    suscipit aliquam consequuntur icum aliquid ex rem delectus
-                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
-                    molestiae quod!{" "}
-                    <a
-                        href="https://www.youtube.com/watch?v=pig06YJijQ8&ab_channel=DarrenArthur"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        video
-                    </a>{" "}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing,
-                    suscipit aliquam consequuntur icum aliquid ex rem delectus
-                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
-                    molestiae quod!
+                    Please note that you <strong>DO NOT</strong> need to
+                    complete this form if you have already registered (or will
+                    register) for the KDA conference from{" "}
+                    <strong>November 9-11, 2022.</strong> The link for the PFDD
+                    meeting will be sent to you along with a separate link for
+                    the remainder of the conference.
                 </Typography>
-                <Typography
-                    sx={{
-                        maxWidth: "75ch",
-                        color: "var(--fc-gray-800)",
-                        margin: "1em 0",
-                    }}
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing,
-                    suscipit aliquam consequuntur icum aliquid ex rem delectus
-                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
-                    molestiae quod!
-                </Typography>
-                <Typography
-                    sx={{
-                        maxWidth: "75ch",
-                        color: "var(--fc-gray-800)",
-                        margin: "1em 0",
-                    }}
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing,
-                    suscipit aliquam consequuntur icum aliquid ex rem delectus
-                    quam, nesciunt nam. Laudantium sequi deleniti voluptate
-                    molestiae quod!
-                </Typography>
-                <Typography
-                    sx={{
-                        maxWidth: "75ch",
-                        color: "var(--fc-gray-800)",
-                        margin: "1em 0",
-                    }}
-                >
-                    For more information, please contact KDA using this form:
-                    and let us know about your interest and/or any questions you
-                    may have.
-                </Typography>
+
                 <form noValidate autoComplete="off" onSubmit={handleSubmit}>
                     <Box
                         sx={{
@@ -172,15 +138,16 @@ const Volunteer = () => {
                         />
                         <TextField
                             // onChange={(e) => {
-                            //     setAddress(e.target.value);
+                            //     setEmail(e.target.value);
                             // }}
-                            id="input-address"
-                            label="Full Address"
+                            id="input-email"
+                            label="Email"
                             variant="outlined"
                             required
                             size="small"
-                            error={addressError}
+                            error={emailError}
                         />
+
                         <TextField
                             // onChange={(e) => {
                             //     setTelephone(e.target.value);
@@ -192,17 +159,7 @@ const Volunteer = () => {
                             size="small"
                             error={telephoneError}
                         />
-                        <TextField
-                            // onChange={(e) => {
-                            //     setEmail(e.target.value);
-                            // }}
-                            id="input-email"
-                            label="Email"
-                            variant="outlined"
-                            required
-                            size="small"
-                            error={emailError}
-                        />
+                        <Selecter selectOptions={selectOptions} />
                         <TextField
                             // onChange={(e) => {
                             //     setName(e.target.value);
@@ -212,7 +169,8 @@ const Volunteer = () => {
                             variant="outlined"
                             multiline
                             rows={4}
-                            size="small"
+                            size="medium"
+                            sx={{ minWidth: "40ch" }}
                         />
                         {!isSubmitted && (
                             <Button
