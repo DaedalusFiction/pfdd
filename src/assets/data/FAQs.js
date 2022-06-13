@@ -29,7 +29,7 @@ const FAQs = [
         question: "Why does the FDA conduct PFDD meetings?",
         answer: (
             <Typography>
-                The FDA's view is that, “People living with a condition are
+                The FDA's view is that “People living with a condition are
                 uniquely positioned to inform the understanding of the
                 therapeutic context for drug development and evaluation.” The
                 lived experiences of patients with a disease provide a unique
@@ -74,19 +74,19 @@ const FAQs = [
             "Do you need to register for the KDA conference to participate in the PFDD? ",
         answer: (
             <Typography>
-                "No, anyone can participate in the PFDD session which will be
+                No, anyone can participate in the PFDD session which will be
                 live-streamed on Zoom. You can register for the PFDD{" "}
                 <Link to="register" sx={{ textDecoration: "underline" }}>
                     here.
                 </Link>{" "}
                 Be sure to include your email to ensure you receive the link for
-                the meeting."
+                the meeting.
             </Typography>
         ),
     },
     {
         question: "How will my information be used?",
-        answer: "Any comments or questions from PFDD participants will be recorded and reported in the Voice of the Patient report that will be developed after the meeting.  Individual comments will be reported anonymously, that is, not attributed to a specific person.  There will be exceptions, such as speakers and panel participants who are identified in the course of the meeting and who authorize their names to be included in the report. Even in those cases, however, most people will be identified only by first name and initial of their last name.",
+        answer: "Any comments or questions from PFDD participants will be recorded and reported in the Voice of the Patient report that will be developed after the meeting.  Individual comments will be reported anonymously--that is, not attributed to a specific person. There will be exceptions, such as speakers and panel participants who are identified in the course of the meeting and who authorize their names to be included in the report. Even in those cases, however, most people will be identified only by first name and initial of their last name.",
     },
 ];
 
