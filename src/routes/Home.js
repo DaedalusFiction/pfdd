@@ -22,6 +22,7 @@ const Home = () => {
                         <Typography
                             variant="h2"
                             sx={{
+                                fontSize: "2.5rem",
                                 margin: "1em 0 .75em 0",
                             }}
                         >
@@ -98,6 +99,7 @@ const Home = () => {
                             variant="h2"
                             sx={{
                                 margin: "1em 0 .75em 0",
+                                fontSize: "2.5rem",
                             }}
                         >
                             What is a PFDD?
@@ -142,6 +144,7 @@ const Home = () => {
                             variant="h2"
                             sx={{
                                 margin: "1em 0 .75em 0",
+                                fontSize: "2.5rem",
                             }}
                         >
                             Frequently Asked Questions

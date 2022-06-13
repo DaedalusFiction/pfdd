@@ -13,6 +13,9 @@ const Footer = () => {
             href: "https://kennedysdisease.org",
         },
     ];
+    const navigateToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <Box
             sx={{
@@ -21,30 +24,42 @@ const Footer = () => {
             }}
         >
             <Container>
-                <Typography
-                    variant="h6"
-                    sx={{ color: "white", marginBottom: "1em" }}
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "end",
+                    }}
                 >
-                    Kennedy's Disease Association 2022 PFDD
-                </Typography>
-
-                {links.map((item, index) => {
-                    return (
-                        <a
-                            key={index}
-                            href={item.href}
-                            target="_blank"
-                            rel="noreferrer"
+                    <Box>
+                        <Typography
+                            variant="h6"
+                            sx={{ color: "white", marginBottom: "1em" }}
                         >
-                            <Typography
-                                sx={{ color: "var(--fc-gray-200)" }}
-                                gutterBottom
-                            >
-                                {item.text}
-                            </Typography>
-                        </a>
-                    );
-                })}
+                            Kennedy's Disease Association 2022 PFDD
+                        </Typography>
+                        {links.map((item, index) => {
+                            return (
+                                <a
+                                    key={index}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <Typography
+                                        sx={{ color: "var(--fc-gray-200)" }}
+                                        gutterBottom
+                                    >
+                                        {item.text}
+                                    </Typography>
+                                </a>
+                            );
+                        })}
+                    </Box>
+                    <Button onClick={navigateToTop} sx={{ color: "white" }}>
+                        Back to Top
+                    </Button>
+                </Box>
             </Container>
         </Box>
     );
