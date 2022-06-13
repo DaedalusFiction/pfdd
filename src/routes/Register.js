@@ -14,6 +14,8 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import emailjs from "@emailjs/browser";
 import Selecter from "../components/Selecter";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../firebase";
 
 const Volunteer = () => {
     const selectOptions = [
@@ -85,6 +87,8 @@ const Volunteer = () => {
                     console.log("FAILED...", error);
                 }
             );
+
+        await setDoc(doc(db, "volunteers", name), templateParams);
     };
     return (
         <Container maxWidth="md">
