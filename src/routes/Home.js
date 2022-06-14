@@ -12,6 +12,9 @@ import Hero from "../components/Hero";
 import Sidebar from "../components/Sidebar";
 import FAQs from "../assets/data/FAQs";
 
+import banner from "../assets/images/kdabanner.png";
+import ModalImage from "react-modal-image";
+
 const Home = () => {
     return (
         <Box>
@@ -19,6 +22,33 @@ const Home = () => {
             <Container>
                 <Grid container spacing={8} sx={{ marginBottom: "8rem" }}>
                     <Grid item xs={12} md={9}>
+                        <Typography
+                            variant="h2"
+                            sx={{
+                                fontSize: "2.5rem",
+                                margin: "1em 0 .75em 0",
+                            }}
+                        >
+                            Where and When
+                        </Typography>
+                        <Typography
+                            sx={{
+                                maxWidth: "75ch",
+                                color: "var(--fc-gray-800)",
+                                margin: "0 auto 1em auto",
+                            }}
+                        >
+                            A Patient-Focused Drug Development (PFDD) meeting
+                            will be held on the first day of the 2022 KDA
+                            conference, Wednesday, November 9.
+                        </Typography>
+                        <Box sx={{ margin: "3rem 0" }}>
+                            <ModalImage
+                                small={banner}
+                                medium={banner}
+                                alt="event banner"
+                            />
+                        </Box>
                         <Typography
                             variant="h2"
                             sx={{

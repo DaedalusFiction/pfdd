@@ -56,9 +56,11 @@ const Footer = () => {
                             );
                         })}
                     </Box>
-                    <Button onClick={navigateToTop} sx={{ color: "white" }}>
-                        Back to Top
-                    </Button>
+                    <Link to="/">
+                        <Button onClick={navigateToTop} sx={{ color: "white" }}>
+                            Back to Top
+                        </Button>
+                    </Link>
                 </Box>
             </Container>
         </Box>

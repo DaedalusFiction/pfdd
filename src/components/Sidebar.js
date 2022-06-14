@@ -7,6 +7,8 @@ import {
     Grid,
     Typography,
 } from "@mui/material";
+import banner from "../assets/images/kdabanner.png";
+import ModalImage from "react-modal-image";
 
 const Sidebar = () => {
     return (

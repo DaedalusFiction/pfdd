@@ -25,6 +25,7 @@ const Hero = () => {
                         sx={{
                             color: "var(--fc-gray-200)",
                             textShadow: "5px 5px 5px black",
+                            fontSize: "clamp(3rem, 6vw, 10.5rem)",
                         }}
                     >
                         2022 PFDD
