@@ -42,7 +42,7 @@ const Home = () => {
                             will be held on the first day of the 2022 KDA
                             conference, Wednesday, November 9.
                         </Typography>
-                        <Box sx={{ margin: "3rem 0" }}>
+                        <Box sx={{ margin: "3rem 5vw" }}>
                             <ModalImage
                                 small={banner}
                                 medium={banner}
