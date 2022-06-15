@@ -43,13 +43,13 @@ const Header = () => {
                             padding: "1rem 0",
                         }}
                     >
-                        <Link to="/">
+                        <a href="https://kennedysdisease.org">
                             <img
                                 src={logo}
                                 alt="KDA Logo"
                                 style={{ width: "100%", height: "auto" }}
                             />
-                        </Link>
+                        </a>
                     </Box>
 
                     <Box
@@ -85,6 +85,16 @@ const Header = () => {
                                 display: { xs: "block", md: "none" },
                             }}
                         >
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Link to="/">
+                                    <Typography
+                                        textAlign="center"
+                                        sx={{ color: "var(--fc-primary)" }}
+                                    >
+                                        Home
+                                    </Typography>
+                                </Link>
+                            </MenuItem>
                             {pages.map((page) => (
                                 <MenuItem
                                     key={page}
@@ -132,6 +142,18 @@ const Header = () => {
                             },
                         }}
                     >
+                        <Link to="/">
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{
+                                    my: 2,
+                                    color: "var(--fc-primary)",
+                                    display: "block",
+                                }}
+                            >
+                                Home
+                            </Button>
+                        </Link>
                         {pages.map((page, index) => (
                             <Link key={page} to={page.toLowerCase()}>
                                 <Button
