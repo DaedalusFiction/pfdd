@@ -219,7 +219,7 @@ const Volunteer = () => {
                     <Typography
                         sx={{ marginBottom: "3em", fontWeight: "bold" }}
                     >
-                        Thank you for volunteering to help with the 2022 PFDD!
+                        Thank you for signing up to attend the 2022 PFDD!
                     </Typography>
                 )}
             </div>
