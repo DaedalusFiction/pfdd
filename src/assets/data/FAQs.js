@@ -62,7 +62,7 @@ const FAQs = [
     {
         question:
             "Why are we doing the PFDD as part of KDA's annual conference? ",
-        answer: "KDA's annual conference provides a timely and convenient venue for the PFDD.  The first day of our conferences are always focused on patient issues, and the PFDD format allows for detailed and in-depth discussions of topics important to patients and their families as well as for researchers and pharmaceutical companies. ",
+        answer: "KDA's annual conference provides a timely and convenient venue for the PFDD.  The first day of our conferences is always focused on patient issues, and the PFDD format allows for detailed and in-depth discussions of topics important to patients and their families as well as for researchers and pharmaceutical companies. ",
     },
     {
         question:
