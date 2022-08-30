@@ -8,6 +8,7 @@ import Nopage from "./routes/Nopage";
 import Register from "./routes/Register";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Admin01 from "./routes/Admin01";
+import SampleQuestions from "./routes/SampleQuestions";
 
 const theme = createTheme({
     palette: {
@@ -29,6 +30,10 @@ function App() {
                         <Route path="photos" element={<Photos />} />
                         <Route path="documents" element={<Documents />} />
                         <Route path="register" element={<Register />} />
+                        <Route
+                            path="sample-questions"
+                            element={<SampleQuestions />}
+                        />
                         <Route path="admin01" element={<Admin01 />} />
                         <Route path="*" element={<Nopage />} />
                     </Route>

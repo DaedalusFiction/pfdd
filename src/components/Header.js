@@ -110,6 +110,16 @@ const Header = () => {
                                     </Link>
                                 </MenuItem>
                             ))}
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Link to="/sample-questions">
+                                    <Typography
+                                        textAlign="center"
+                                        sx={{ color: "var(--fc-primary)" }}
+                                    >
+                                        Sample Questions
+                                    </Typography>
+                                </Link>
+                            </MenuItem>
                         </Menu>
                     </Box>
 
@@ -168,6 +178,18 @@ const Header = () => {
                                 </Button>
                             </Link>
                         ))}
+                        <Link to="/sample-questions">
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{
+                                    my: 2,
+                                    color: "var(--fc-primary)",
+                                    display: "block",
+                                }}
+                            >
+                                Sample Questions
+                            </Button>
+                        </Link>
                     </Box>
                     <Button
                         variant="contained"
