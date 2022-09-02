@@ -12,9 +12,13 @@
     scroll-behavior: smooth;
 }
 
-a {
+a:not(".link") {
     text-decoration: none;
     color: var(--fc-primary);
+}
+
+.link {
+    color: blue;
 }
 
 .page-link {

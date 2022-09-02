@@ -14,6 +14,7 @@ import FAQs from "../assets/data/FAQs";
 
 import banner from "../assets/images/kdabanner.png";
 import ModalImage from "react-modal-image";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -154,6 +155,21 @@ const Home = () => {
                             to more systematically gather patients' perspectives
                             on their conditions and available therapies to treat
                             their conditions.
+                        </Typography>
+                        <br />
+                        <Typography
+                            sx={{
+                                maxWidth: "75ch",
+                                color: "var(--fc-gray-800)",
+                                margin: "0 auto",
+                            }}
+                        >
+                            For sample questions to be addressed at the KDAPFDD,
+                            visit the{" "}
+                            <Link className="link" to="/sample-questions">
+                                Sample Questions
+                            </Link>{" "}
+                            page.
                         </Typography>
 
                         {/* <Typography
