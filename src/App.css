@@ -12,17 +12,21 @@
     scroll-behavior: smooth;
 }
 
-a:not(".link") {
+a:not(.nav-link) {
     text-decoration: none;
     color: var(--fc-primary);
 }
 
-.link {
+.link:not(.nav-link) {
     color: blue;
 }
 
-.page-link {
+.page-link:not(.nav-link) {
     color: blue;
+}
+
+.nav-link {
+    text-decoration: none !important;
 }
 .page-link:hover {
     text-decoration: underline;

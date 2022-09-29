@@ -2,6 +2,7 @@ import { List, ListItem, ListItemText, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
+import sampleQuestions from "../assets/images/sampleQuestions.pdf";
 
 const panelOneQuestions = [
     {
@@ -77,6 +78,13 @@ const SampleQuestions = () => {
                 >
                     Example PFDD Questions for KDA Conference
                 </Typography>
+                <iframe
+                    title="sample-questions"
+                    src={sampleQuestions}
+                    width="100%"
+                    height="1000px"
+                ></iframe>
+                {/* 
                 <Typography variant="h5" component="h2">
                     Panel 1: Health Effects and Daily Impacts of KD, responding
                     to these questions:
@@ -116,7 +124,7 @@ const SampleQuestions = () => {
                             );
                         })}
                     </List>
-                </Container>
+                </Container> */}
                 <Typography variant="h6" sx={{ textAlign: "center" }}>
                     Click{" "}
                     <Link className="page-link" to="/register">

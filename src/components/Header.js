@@ -155,6 +155,7 @@ const Header = () => {
                         <Link to="/">
                             <Button
                                 onClick={handleCloseNavMenu}
+                                className="nav-link"
                                 sx={{
                                     my: 2,
                                     color: "var(--fc-primary)",
@@ -168,6 +169,7 @@ const Header = () => {
                             <Link key={page} to={page.toLowerCase()}>
                                 <Button
                                     onClick={handleCloseNavMenu}
+                                    className="nav-link"
                                     sx={{
                                         my: 2,
                                         color: "var(--fc-primary)",
