@@ -34,11 +34,23 @@ const Volunteer = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const [affiliation, setAffiliation] = useState("");
+    const [submitError, setSubmitError] = useState(false);
 
     const handleChange = (event) => {
-        console.log(event.target.value);
         setAffiliation(event.target.value);
     };
+
+    const handleEmailChange = (e) => {
+        setEmailError(!ValidateEmail(e.target.value));
+    };
+
+    function ValidateEmail(mail) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+            return true;
+        }
+        console.log("invalid email");
+        return false;
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -49,8 +61,8 @@ const Volunteer = () => {
         const comment = document.getElementById("input-comment").value;
 
         setNameError(false);
-        setEmailError(false);
         setTelephoneError(false);
+        setSubmitError(false);
         if (name === "") {
             setNameError(true);
         }
@@ -60,8 +72,6 @@ const Volunteer = () => {
         if (telephone === "") {
             setTelephoneError(true);
         }
-
-        setIsSubmitted(true);
 
         var templateParams = {
             website: "PFDD",
@@ -82,9 +92,11 @@ const Volunteer = () => {
             .then(
                 function (response) {
                     console.log("SUCCESS!", response.status, response.text);
+                    setIsSubmitted(true);
                 },
                 function (error) {
                     console.log("FAILED...", error);
+                    setSubmitError(true);
                 }
             );
 
@@ -150,6 +162,7 @@ const Volunteer = () => {
                                 //     setEmail(e.target.value);
                                 // }}
                                 id="input-email"
+                                onChange={handleEmailChange}
                                 label="Email"
                                 variant="outlined"
                                 required
@@ -220,6 +233,13 @@ const Volunteer = () => {
                         sx={{ marginBottom: "3em", fontWeight: "bold" }}
                     >
                         Thank you for signing up to attend the 2022 PFDD!
+                    </Typography>
+                )}
+                {submitError && (
+                    <Typography>
+                        Something went wrong! Please reload and try again.
+                        Contact hello@fictionalweb.com if you continue to have
+                        problems.
                     </Typography>
                 )}
             </div>
