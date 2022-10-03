@@ -48,7 +48,6 @@ const Volunteer = () => {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
             return true;
         }
-        console.log("invalid email");
         return false;
     }
 
@@ -65,12 +64,15 @@ const Volunteer = () => {
         setSubmitError(false);
         if (name === "") {
             setNameError(true);
+            return;
         }
         if (email === "") {
             setEmailError(true);
+            return;
         }
         if (telephone === "") {
             setTelephoneError(true);
+            return;
         }
 
         var templateParams = {
@@ -157,6 +159,9 @@ const Volunteer = () => {
                                 size="small"
                                 error={nameError}
                             />
+                            {nameError && (
+                                <Typography>Please enter your name</Typography>
+                            )}
                             <TextField
                                 // onChange={(e) => {
                                 //     setEmail(e.target.value);
@@ -170,6 +175,11 @@ const Volunteer = () => {
                                 error={emailError}
                             />
 
+                            {emailError && (
+                                <Typography>
+                                    Please enter a valid email
+                                </Typography>
+                            )}
                             <TextField
                                 // onChange={(e) => {
                                 //     setTelephone(e.target.value);
@@ -181,6 +191,11 @@ const Volunteer = () => {
                                 size="small"
                                 error={telephoneError}
                             />
+                            {telephoneError && (
+                                <Typography>
+                                    Please enter your phone number
+                                </Typography>
+                            )}
                             <Box sx={{ minWidth: 120 }}>
                                 <FormControl fullWidth>
                                     <InputLabel>Affiliation</InputLabel>
